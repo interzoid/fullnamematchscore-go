@@ -1,8 +1,8 @@
 // Generates a matching score from 0-100, where 100 is the highest, on how closely
-// two individual full names match. The algorithms used are a series of tests,
-// algorithms, and an ever-growing body of Machine Language generated knowledge
+// two individual full names match. The scoring is based on a series of tests,
+// algorithms, and an ever-growing body of Machine Learning-based generated knowledge
 
-package GetFullNameMatchScore
+package FullNameMatchScore
 
 // visit www.interzoid.com to obtain the required API license key - free trial available
 
@@ -25,7 +25,6 @@ type payload struct {
 func GetScore(license,fullname1,fullname2 string) (string, string, string, error) {
   response, err := http.Get("https://api.interzoid.com/getfullnamematchscore?license="+url2.QueryEscape(license)+"&fullname1="+url2.QueryEscape(fullname1)+"&fullname2="+url2.QueryEscape(fullname2))
   
-  //if err != nil || response.StatusCode != 200 { return "0","Fail","0",errors.New(response.Status) }
   if err != nil || response.StatusCode != 200 {
   	switch response.StatusCode {
 		case 403 : response.Status = "Invalid API license key. Register at www.interzoid.com"
