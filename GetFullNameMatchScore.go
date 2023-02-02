@@ -22,7 +22,7 @@ type Payload struct {
 }
 
 // this function takes two individual names and the API license key and returns the match score
-func GetFullNameMatchScore(license,fullname1,fullname2 string) (string, string, string, error) {
+func GetScore(license,fullname1,fullname2 string) (string, string, string, error) {
   response, err := http.Get("https://api.interzoid.com/getfullnamematchscore?license="+url2.QueryEscape(license)+"&fullname1="+url2.QueryEscape(fullname1)+"&fullname2="+url2.QueryEscape(fullname2))
   
   //if err != nil || response.StatusCode != 200 { return "0","Fail","0",errors.New(response.Status) }
