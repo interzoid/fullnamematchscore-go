@@ -1,6 +1,6 @@
 // Generates a matching score from 0-100, where 100 is the highest, on how closely
 // two individual full names match. The scoring is based on a series of tests,
-// algorithms, and an ever-growing body of Machine Learning-based generated knowledge
+// algorithms, AI, and an ever-growing body of Machine Learning-based generated knowledge.
 
 package FullNameMatchScore
 
