@@ -15,7 +15,7 @@ import (
 
 
 // used to retrieve the data payload from the Interzoid API
-type Payload struct {
+type payload struct {
 	Score string  // match score
 	Code string  // success or fail
 	Credits string // credits remaining for this API license key
@@ -34,7 +34,7 @@ func GetScore(license,fullname1,fullname2 string) (string, string, string, error
   	return "0","Fail","0",errors.New(response.Status)
   }
 
-  thePayload := Payload{}
+  thePayload := payload{}
   json.NewDecoder(response.Body).Decode(&thePayload)
 
   return thePayload.Score,thePayload.Code,thePayload.Credits,nil
