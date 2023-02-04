@@ -19,3 +19,17 @@ Then, feed the information into the GetScore() method:
 
 
 The return values will be the generated match comparison score (0-100), a code (success or failure), how many remaining credits on your API key, and any error messages. The score allows you to set a score threshold in your own logic for your specific case, for example, any score higher than 50 can be considered a "match" (or 60, 70, etc.)
+
+Examples:
+
+    "James Kelly", "Jim Kelly"  ->  85
+
+    "Mr Robert J McCarthy", "Bob Macarthy"  ->  80
+
+See Also:
+
+**Individual Name Similarity Keys**: https://github.com/interzoid/fullnamesimkey-go
+
+**Company Name Similarity Keys**: https://github.com/interzoid/companynamesimkey-go
+
+**Street Address Similarity Keys**: https://github.com/interzoid/streetaddresssimkey-go
