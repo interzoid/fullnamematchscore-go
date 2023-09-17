@@ -9,7 +9,11 @@ To generate the match score, you will need the following information:
 - an API License key, available at https://www.interzoid.com
 - two individual full names to compare
 
-Begin by importing the package:
+Begin by retrieving the package:
+
+    go get "github.com/interzoid/fullnamematchscore-go"
+
+Import the package into your code:
 
     import "github.com/interzoid/fullnamematchscore-go"
 
